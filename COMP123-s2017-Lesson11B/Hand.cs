@@ -7,7 +7,7 @@ using System.Text;
  * DAte: July 27, 2017
  * Description: This is a Hand class
  * It inherits from the CardList Abstract class
- * Verson: 0.2- Added HighestCards() Method that sorts and displays the sorted top five cards
+ * Verson: 0.3- Edited HighestCards() Method that sorts and displays the sorted top five cards
  */
 namespace COMP123_s2017_Lesson11B
 {
@@ -59,23 +59,24 @@ namespace COMP123_s2017_Lesson11B
                            orderby cards.Face descending
                            select cards;
 
-            Console.WriteLine("********** The Highest Cards in Descending Order ********** ");
+            Console.WriteLine("==================================");
             int number = 0;
-            int max = 0;
+            int highest = 0;
             foreach (Card cards in sortHand)
             {
                     if (number== 0)
                     {
-                    max = (int)cards.Face;
+                    highest = (int)cards.Face;
                     }
                 else
                 {
-                    if ((int)cards.Face < max) break;
+                    if ((int)cards.Face < highest) break;
                 }
-                Console.WriteLine("The " + cards.Face+ " of " + cards.Suit);
+                Console.WriteLine("The Highest Card is: " + cards.Face+ " of " + cards.Suit);
                 number++;
                 }
-               
-            }
+            Console.WriteLine("==================================");
+            Console.WriteLine("");
         }
+      }
     }
