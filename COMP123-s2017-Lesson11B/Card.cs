@@ -7,7 +7,7 @@ using System.Threading.Tasks;
  * Name: Bishnu Khanal
  * DAte: July 25, 2017
  * Description: This is the Card class
- * Verson: 0.2 -Implemented the IClonable interface
+ * Verson: 0.2 -Added the Override method
  */
 namespace COMP123_s2017_Lesson11B
 {
@@ -65,6 +65,15 @@ namespace COMP123_s2017_Lesson11B
             return new Card(this.Face, this.Suit);
         }
         // PUBLIC METHODS
-       
+        /// <summary>
+        /// This method overrides the firstcard with the second card
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
+       public static void OverWrite(Card first, Card second)
+        {
+            first.Face = second.Face;
+            first.Suit = second.Suit;
+        } 
     }
 }
