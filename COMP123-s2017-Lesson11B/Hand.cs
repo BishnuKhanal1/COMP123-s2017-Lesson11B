@@ -6,6 +6,7 @@ using System.Text;
  * Name: Bishnu Khanal
  * DAte: July 27, 2017
  * Description: This is a Hand class
+ * It inherits from the CardList Abstract class
  * Verson: 0.1- Created the HandClass
  */
 namespace COMP123_s2017_Lesson11B
