@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  * DAte: July 25, 2017
  * Description: This is a demo for lesson 11
  * It inherits from the List generic and uses cards
- * Verson: 0.4 Tested the new Hand class
+ * Verson: 0.4 Tested the new Deck class
  */
 namespace COMP123_s2017_Lesson11B
 {
@@ -17,6 +17,8 @@ namespace COMP123_s2017_Lesson11B
         static void Main(string[] args)
         {
             Deck deck = new Deck();
+            Hand hand = new Hand();
+
             Console.WriteLine("Origional Deck  Number of Cards: "+deck.Count);
             Console.WriteLine("==================================");
             Console.WriteLine(deck.ToString());
@@ -27,7 +29,6 @@ namespace COMP123_s2017_Lesson11B
             Console.WriteLine(deck.ToString());
 
 
-            Hand hand = new Hand();
             deck.Shuffle();
             Console.WriteLine("Shuffled");
             Console.WriteLine("==================================");

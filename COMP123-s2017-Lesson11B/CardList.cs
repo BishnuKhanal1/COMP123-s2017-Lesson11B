@@ -6,8 +6,9 @@ using System.Text;
  * Name: Bishnu Khanal
  * DAte: July 27, 2017
  * Description: This is the abstract superclass for lesson 11
+ * Description: This is the abstract superclass CardList
+ * Version: 0.1 - Created/ revised the CardList abstract class
  * 
- * Verson: 0.1- 
  */
 namespace COMP123_s2017_Lesson11B
 {
