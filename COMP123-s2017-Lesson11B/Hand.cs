@@ -59,17 +59,17 @@ namespace COMP123_s2017_Lesson11B
             Console.WriteLine("The Highest cards in descending order: ");
             foreach (var item in sortedHand)
             {
-                {
-                    Console.WriteLine(item);
-                }
-                Console.WriteLine("");
-                Console.WriteLine("The Highest value cards");
-                foreach (var cards in sortedHand)
-                {
-                    if (cards == sortedHand.Max())
+                //{
+                //    Console.WriteLine(item);
+                //}
+                //Console.WriteLine("");
+                //Console.WriteLine("The Highest value cards");
+                //foreach (var cards in sortedHand)
+                //{
+                    if (item == sortedHand.Max())
                     {
-                        Console.WriteLine(cards);
-                    }
+                        Console.WriteLine(item);
+                    //}
                 }
                
             }

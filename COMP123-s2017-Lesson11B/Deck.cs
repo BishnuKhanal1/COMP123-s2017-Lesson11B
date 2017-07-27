@@ -7,7 +7,7 @@ using System.Text;
  * DAte: July 25, 2017
  * Description: This is a Deck class
  * It inherits from the List generic and uses Card as the base type
- * Verson: 0.6- Added Deal5()method that returns top five cards from the deck
+ * Verson: 0.7- Edited Deal5()method that returns top five cards from the deck
  */
 namespace COMP123_s2017_Lesson11B
 {
@@ -119,8 +119,7 @@ namespace COMP123_s2017_Lesson11B
                 Card topFive = this[0];
                 topFiveHand.Add(this[0]);
                 this.RemoveAt(0); //this removes the cards dealt as top five
-                Console.WriteLine("Cards Dealt: {0} = {1} of {2} || Deck size = {3}", topCards+1, topFive.Suit, topFive.Face, this.Count);
-            }
+               }
             return topFiveHand;
         }
     }
