@@ -55,24 +55,27 @@ namespace COMP123_s2017_Lesson11B
         /// <param name="hand"></param>
         public void HighestCards(Hand hand)
         {
-            var sortedHand = from cards in hand orderby cards.Face descending select cards.Suit;
-            Console.WriteLine("The Highest cards in descending order: ");
-            foreach (var item in sortedHand)
+            var sortHand = from cards in hand
+                           orderby cards.Face descending
+                           select cards;
+
+            Console.WriteLine("********** The Highest Cards in Descending Order ********** ");
+            int number = 0;
+            int max = 0;
+            foreach (Card cards in sortHand)
             {
-                //{
-                //    Console.WriteLine(item);
-                //}
-                //Console.WriteLine("");
-                //Console.WriteLine("The Highest value cards");
-                //foreach (var cards in sortedHand)
-                //{
-                    if (item == sortedHand.Max())
+                    if (number== 0)
                     {
-                        Console.WriteLine(item);
-                    //}
+                    max = (int)cards.Face;
+                    }
+                else
+                {
+                    if ((int)cards.Face < max) break;
+                }
+                Console.WriteLine("The " + cards.Face+ " of " + cards.Suit);
+                number++;
                 }
                
             }
         }
     }
-}
