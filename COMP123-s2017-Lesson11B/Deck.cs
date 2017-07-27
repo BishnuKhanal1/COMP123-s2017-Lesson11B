@@ -7,7 +7,7 @@ using System.Text;
  * DAte: July 25, 2017
  * Description: This is a Deck class
  * It inherits from the List generic and uses Card as the base type
- * Verson: 0.3- Refactored the Shuffle method
+ * Verson: 0.5- Refactored to ToString method
  */
 namespace COMP123_s2017_Lesson11B
 {
@@ -28,14 +28,7 @@ namespace COMP123_s2017_Lesson11B
 
         // PUBLIC PROPERTIES
 
-        // CONSTRUCTOR
-        /// <summary>
-        /// This is the main constructor.
-        /// </summary>
-        public Deck()
-        {
-            this._initialize();
-        }
+        
 
         // PRIVATE METHODS
 
@@ -43,7 +36,7 @@ namespace COMP123_s2017_Lesson11B
         /// This is the Initialize method it sets values for private variables
         /// and public properties as well as other class objects.
         /// </summary>
-        private void _initialize()
+        protected override void _initialize()
         {
             // initialize the pseudo-random number generator
             this._random = new Random();
@@ -69,6 +62,9 @@ namespace COMP123_s2017_Lesson11B
         public override string ToString()
         {
             string outputString = "";
+
+            outputString += "The Deck Contains Number of Cards: " + this.Count + "\n";
+            outputString += "===========================================================";
 
             foreach (Card card in this)
             {
