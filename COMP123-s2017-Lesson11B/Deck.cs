@@ -7,7 +7,7 @@ using System.Text;
  * DAte: July 25, 2017
  * Description: This is a Deck class
  * It inherits from the List generic and uses Card as the base type
- * Verson: 0.5- Refactored to ToString method
+ * Verson: 0.6- Returned top card from the deck
  */
 namespace COMP123_s2017_Lesson11B
 {
@@ -92,6 +92,16 @@ namespace COMP123_s2017_Lesson11B
                 Card.OverWrite(this[secondCard], this[firstCard]);
                 Card.OverWrite(this[secondCard], tempCard);
             }
+        }
+        /// <summary>
+        /// this methods returns the top from from the deck
+        /// </summary>
+        /// <returns></returns>
+        public Card Deal1()
+        {
+            Card topCard = this[0];
+            this.RemoveAt(0);//this removes the top card from the deck
+            return topCard;
         }
     }
 }
