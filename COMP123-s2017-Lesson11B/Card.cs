@@ -7,14 +7,14 @@ using System.Threading.Tasks;
  * Name: Bishnu Khanal
  * DAte: July 25, 2017
  * Description: This is the Card class
- * Verson: 0.1 Created the Card class
+ * Verson: 0.2 -Implemented the IClonable interface
  */
 namespace COMP123_s2017_Lesson11B
 {
     /// <summary>
     /// This is the card class
     /// </summary>
-    public class Card 
+    public class Card : ICloneable
     {
         //Private instance variables
         private Face _face;
@@ -55,13 +55,16 @@ namespace COMP123_s2017_Lesson11B
             this.Face = face;
             this.Suit = suit;
         }
-        // PRIVATE METHODS
-
-        // PUBLIC METHODS
+        //* PRIVATE METHODS
         /// <summary>
-        /// This method overrides the built-in Clone method.
+        /// This methods overide the buult in Clone method
         /// </summary>
         /// <returns></returns>
-        
+        public object Clone()
+        {
+            return new Card(this.Face, this.Suit);
+        }
+        // PUBLIC METHODS
+       
     }
 }

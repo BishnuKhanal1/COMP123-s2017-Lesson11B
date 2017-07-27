@@ -7,7 +7,7 @@ using System.Text;
  * DAte: July 25, 2017
  * Description: This is a Deck class
  * It inherits from the List generic and uses Card as the base type
- * Verson: 0.1 Created the Deck class
+ * Verson: 0.2- Added the Shuffle method
  */
 namespace COMP123_s2017_Lesson11B
 {
@@ -76,6 +76,29 @@ namespace COMP123_s2017_Lesson11B
             }
 
             return outputString;
+        }
+        /// <summary>
+        /// This method shuffles the deck by using random indices to select two cards at a time
+        /// It uses a Fisher-Yates like algorithm
+        /// </summary>
+        public void Shuffle()
+        {
+            int firstCard;
+            int secondCard;
+            Card tempCard;
+
+            for (int card = 0; card < this.Count; card++)
+            {
+                firstCard = this.Random.Next(0, 52);
+                secondCard = this.Random.Next(0, 52);
+
+                tempCard = (Card)this[secondCard].Clone();
+
+                this[secondCard].Face = this[firstCard].Face;
+                this[secondCard].Suit = this[firstCard].Suit;
+                this[firstCard].Face = tempCard.Face;
+                this[firstCard].Suit = tempCard.Suit;
+            }
         }
     }
 }

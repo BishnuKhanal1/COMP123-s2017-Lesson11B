@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  * DAte: July 25, 2017
  * Description: This is a demo for lesson 11
  * It inherits from the List generic and uses cards
- * Verson: 0.2 Implemeted the Deck class
+ * Verson: 0.3 Test Shuffle method of the Deck class
  */
 namespace COMP123_s2017_Lesson11B
 {
@@ -17,6 +17,13 @@ namespace COMP123_s2017_Lesson11B
         static void Main(string[] args)
         {
             Deck deck = new Deck();
+            Console.WriteLine("Origional Deck");
+            Console.WriteLine("==================================");
+            Console.WriteLine(deck.ToString());
+            Console.WriteLine();
+            deck.Shuffle();
+            Console.WriteLine("Shuffled Deck");
+            Console.WriteLine("==================================");
             Console.WriteLine(deck.ToString());
         }
     }
