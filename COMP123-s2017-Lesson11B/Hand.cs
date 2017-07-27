@@ -70,11 +70,15 @@ namespace COMP123_s2017_Lesson11B
                     }
                 else
                 {
-                    if ((int)cards.Face < highest) break;
+                    if ((int)cards.Face < highest)
+                        break;
                 }
-                Console.WriteLine("The Highest Card is: " + cards.Face+ " of " + cards.Suit);
+                string message = "";
+                message+= "The Highest Card is: " + cards.Face+ " of " + cards.Suit;
+                Console.WriteLine(message);
                 number++;
-                }
+               
+            }
             Console.WriteLine("==================================");
             Console.WriteLine("");
         }

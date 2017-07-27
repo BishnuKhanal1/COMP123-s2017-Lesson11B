@@ -118,9 +118,9 @@ namespace COMP123_s2017_Lesson11B
             {
                 Card topFive = this[0];
                 topFiveHand.Add(this[0]);
-                this.RemoveAt(0); //this removes the cards dealt as top five
-               }
-            return topFiveHand;
+                this.RemoveAt(0); //this removes the cards dealt as top five       
+            }           
+            return topFiveHand;         
         }
     }
 }
