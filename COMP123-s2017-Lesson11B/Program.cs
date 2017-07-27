@@ -18,7 +18,7 @@ namespace COMP123_s2017_Lesson11B
         {
             Deck deck = new Deck();
             Hand hand = new Hand();
-
+            /*
             Console.WriteLine("Origional Deck  Number of Cards: "+deck.Count);
             Console.WriteLine("==================================");
             Console.WriteLine(deck.ToString());
@@ -39,9 +39,24 @@ namespace COMP123_s2017_Lesson11B
             Console.WriteLine(hand.ToString());
 
             Console.WriteLine();
-            Console.WriteLine(deck.ToString());
+            Console.WriteLine(deck.ToString());*/
 
-           // deck = deck.Deal5();//moves top five cards from the deck to the  
+            deck.Shuffle();
+            Console.WriteLine("Shuffled");
+            Console.WriteLine(deck.ToString());
+            Console.WriteLine("Dealt Top Five Cards");
+            Console.WriteLine("==================================");
+            Console.WriteLine();
+           
+            //Console.WriteLine(deck.ToString());
+            hand = deck.Deal5(); //moves top five cards from the deck to the  
+            Console.WriteLine(hand);
+
+            deck.HighestCards();
+            Console.WriteLine(hand.HighestCards());
+
+
+            
         }
     }
 }

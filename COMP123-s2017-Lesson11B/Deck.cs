@@ -91,7 +91,7 @@ namespace COMP123_s2017_Lesson11B
 
                 tempCard = (Card)this[secondCard].Clone();
                 Card.OverWrite(this[secondCard], this[firstCard]);
-                Card.OverWrite(this[secondCard], tempCard);
+                Card.OverWrite(this[firstCard], tempCard);
             }
         }
         /// <summary>
@@ -107,15 +107,19 @@ namespace COMP123_s2017_Lesson11B
             Console.WriteLine("Dealt 1 card -size of deck: "+this.Count);
             return topCard;
         }
-        public Card Deal5()
+        /// <summary>
+        /// This method deals top five cards from the deck of cards
+        /// </summary>
+        /// <returns></returns>
+        public Hand Deal5()
         {
             Hand topFiveHand = new Hand();
             for (int topCards = 0; topCards <= 4; topCards++)
             {
                 Card topFive = this[0];
                 topFiveHand.Add(this[0]);
-                this.RemoveAt(0);
-                Console.WriteLine("Cards Dealt: {0} = {1} of {2} || Deck size = {3}", topCards+1, topFive.Suit, topFive.Face);
+                this.RemoveAt(0); //this removes the cards dealt as top five
+                Console.WriteLine("Cards Dealt: {0} = {1} of {2} || Deck size = {3}", topCards+1, topFive.Suit, topFive.Face, this.Count);
             }
             return topFiveHand;
         }
