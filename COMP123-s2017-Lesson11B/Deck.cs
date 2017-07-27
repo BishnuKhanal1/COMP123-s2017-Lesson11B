@@ -101,6 +101,9 @@ namespace COMP123_s2017_Lesson11B
         {
             Card topCard = this[0];
             this.RemoveAt(0);//this removes the top card from the deck
+
+            //for testing only (debugging)
+            Console.WriteLine("Dealt 1 card -size of deck: "+this.Count);
             return topCard;
         }
     }
