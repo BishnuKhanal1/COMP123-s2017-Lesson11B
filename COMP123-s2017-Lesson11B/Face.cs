@@ -12,7 +12,7 @@ namespace COMP123_s2017_Lesson11B
 {
     public enum Face
     {
-        Ace,
+        Ace=1,
         Two,
         Three,
         Four,

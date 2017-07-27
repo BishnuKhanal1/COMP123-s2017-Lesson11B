@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 /*
  * Name: Bishnu Khanal
  * DAte: July 25, 2017
- * Description: This is a demo for week 11
- * Verson: 0.1 Created the Card clas
+ * Description: This is the Card class
+ * Verson: 0.1 Created the Card class
  */
 namespace COMP123_s2017_Lesson11B
 {
-    class Card
+    /// <summary>
+    /// This is the card class
+    /// </summary>
+    public class Card 
     {
         //Private instance variables
         private Face _face;
         private Suit _suit;
+
         // Public Properties
         public Face Face
         {
@@ -42,7 +46,7 @@ namespace COMP123_s2017_Lesson11B
         //Constructors
         /// <summary>
         /// This isa main constructor
-        /// It takes two parameter -face(Face) and suit(Suit)
+        /// It takes two parameter -face(Face) and -suit(Suit)
         /// </summary>
         /// <param name="face"></param>
         /// <param name="suit"></param>
@@ -51,9 +55,13 @@ namespace COMP123_s2017_Lesson11B
             this.Face = face;
             this.Suit = suit;
         }
-        //Private methods
+        // PRIVATE METHODS
 
-        //Public methods
-
+        // PUBLIC METHODS
+        /// <summary>
+        /// This method overrides the built-in Clone method.
+        /// </summary>
+        /// <returns></returns>
+        
     }
 }
